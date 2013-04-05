@@ -1,0 +1,47 @@
+
+
+<div id="main1">
+<%= form_tag  :method => 'get' do %>
+
+    <p>
+ <b>enter name for search</b><%= text_field_tag :search, params[:search] %><br><br>
+   online:<%= radio_button_tag :tutortyping,:online%>
+institue:<%= radio_button_tag :tutortyping,:institue%><br>
+ <%= submit_tag "search", :name => "save" %>
+ 
+</p>
+<% end %>
+</div>
+
+<div id="main">
+	<%for a in @student do%>
+<table cellspacing="2" cellpadding="20" border="2">
+
+<tr>
+<th>name</th>
+  <th> pay</th>
+  <th> pay type</th>
+  <th> tutor type</th>
+</tr>
+
+<tr>
+
+
+<td><%=a.name%></td>
+
+<td><%=a.pay%></td>
+<td><%=a.pay_type%></td>
+
+<td><%=a.tutor_type%></td>
+
+</tr>
+<%end%><br><br>
+</table>
+
+</div>
+
+
+<%=link_to "add list", :action=>"index"%>
+
+
+

@@ -1,0 +1,14 @@
+<%=form_tag do %>
+
+name:<%=text_field_tag :name%><br>
+
+pay:<%=text_field_tag :pay%>
+<br>
+pay_type:<%=text_field_tag :paytype%>
+<br>
+tutor_type:<%=text_field_tag :tutortype%>
+<br>
+<%=submit_tag :submit%>
+<% end -%>
+
+<%=link_to "display list", :action=>"show"%>

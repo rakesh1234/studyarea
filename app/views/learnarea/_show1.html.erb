@@ -1,0 +1,10 @@
+
+<%= form_tag  :method => 'get', :url => { :action => 'show'} do %>
+  <p>
+    online:<%= radio_button_tag :tutortyping,:online%>
+institue:<%= radio_button_tag :tutortyping,:institue%>
+
+    <%= submit_tag "Search", :name => "save1" %>
+  </p>
+
+<% end %>
